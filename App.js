@@ -2,7 +2,10 @@ import { useFonts } from 'expo-font';
 import 'react-native-gesture-handler';
 
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Text } from 'react-native';
+
+import { store, persistor } from './redux/store';
 
 import Main from './components/Main';
 
@@ -17,10 +20,10 @@ export default function App() {
   }
 
   return (
-    <>
-      <Provider store={store}>
+    <Provider store={store}>
+      <PersistGate loading={<Text>Loading...</Text>} persistor={persistor}>
         <Main />
-      </Provider>
-    </>
+      </PersistGate>
+    </Provider>
   );
 }

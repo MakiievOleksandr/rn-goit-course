@@ -24,7 +24,7 @@ import { authSignUp } from '../../redux/auth/authOperations';
 // import BCG from './assets/stars-on-night.jpg';
 
 const initialState = {
-  nickname: '',
+  nickName: '',
   email: '',
   password: '',
 };
@@ -99,7 +99,7 @@ export default function RegisterScreen({ navigation }) {
               <View>
                 <Text style={styles.text}>Nickname</Text>
                 <TextInput
-                  value={state.nickname}
+                  value={state.nickName}
                   style={styles.input}
                   textAlign='center'
                   onFocus={() => {
@@ -108,7 +108,7 @@ export default function RegisterScreen({ navigation }) {
                   onChangeText={(value) => {
                     setState((prevState) => ({
                       ...prevState,
-                      nickname: value,
+                      nickName: value,
                     }));
                   }}
                 />

@@ -1,0 +1,6 @@
+    "react-devtools": "^4.27.8",//dependencies
+    "react-native-debugger-open": "^0.3.25"//dependencies
+    "react-devtools": "react-devtools"//scripts
+    "postinstall": "rndebugger-open"//scripts
+    "redux-devtools-extension": "^2.13.9",//dependencies
+    
